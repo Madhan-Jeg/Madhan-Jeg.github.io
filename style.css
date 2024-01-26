@@ -185,9 +185,8 @@ a{
 }
 .about-img1 img{
     width: 30rem;
-    border: 0.3rem solid rgba(255,255,255,0.7);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.8);
     border-radius: 1.5rem;
-    transition: all 0.3s;
 }
 .tab-titles{
     display: flex;
@@ -363,19 +362,7 @@ p i{
     font-size: 0.8rem;
 }
 /*----------------------------media----------------------------*/
-@media (max-width: 64rem) {
-    .logo{
-        display: none;
-    }
-    .nav-bar{
-        justify-content: center;
-        width: 30rem;
-        left: calc(50% - 15rem);
-    }
-    .nav-list{
-        width: 100%;
-        justify-content: space-between;
-    }
+@media (width <= 64rem) {
     .welcome-statement{
         align-items: center;
     }
@@ -391,5 +378,54 @@ p i{
     }
     .home-img1 img{
         width: 20rem;
+    }
+}
+@media (width <= 47rem) {
+    .logo{
+        display: none;
+    }
+    .nav-bar{
+        justify-content: center;
+        width: 26rem;
+        left: calc(50% - 13rem);
+    }
+    .nav-list{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-link{
+        font-size: 1rem;
+    }
+    section{
+        padding: 3rem 0.5rem;
+    }
+    .container{
+        padding: 3rem 0.5rem;
+    }
+    .about-img1 img{
+        width: 24rem;
+    }
+    .tab-links{
+        font-size: 1rem;
+    }
+    .tab-contents{
+        font-size: 1rem;
+        width: 24rem;
+    }
+    #education .degree{
+        font-size: 2.5rem;
+    }
+    #skills ul{
+        font-size: 0.9rem;
+    }
+    .card{
+        height: 31.5rem;
+        width: 22.5rem;
+    }
+    .card h2{
+        font-size: 1.3rem;
+    }
+    .card p{
+        font-size: 1.055rem;
     }
 }
