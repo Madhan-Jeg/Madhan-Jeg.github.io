@@ -194,20 +194,29 @@ a{
 }
 .tab-links{
     font-size: 1.25rem;
-    padding: 0.3rem 0.5rem;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(255,255,255,0.7);
+    padding: 0.4rem 0.7rem;
     border-radius: 0.6rem;
-    border: 0.1rem solid white;
+    box-shadow: 0 0.4rem rgba(255,255,255,0.3);
     cursor: pointer;
     transition: all 0.3s;
 }
-.tab-links.active{
-    background: white;
-    color: black;
-}
 .tab-links:hover{
-    background: rgba(255,255,255,0.7);
-    border: 0.1rem solid rgba(255,255,255,0);
-    color: black;
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 0.4rem rgba(255,255,255,0.4);
+}
+.tab-links.active{
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,1);
+    transform: translate(0, 0.2rem);
+    box-shadow: 0 0.2rem rgba(255,255,255,0.4);
+}
+.tab-links:active{
+    transform: translate(0, 0.2rem);
+    box-shadow: 0 0.2rem rgba(255,255,255,0.4);
+    transition-duration: 0.1s;
 }
 .tab-contents{
     font-size: 1.25rem;
@@ -261,32 +270,19 @@ a{
     gap: 1rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
-    cursor: pointer;
-    transition: all 0.4s;
 }
 .card img{
     width: 100%;
     height: 45%;
-    box-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
     border-radius: 0.6rem;
-    transition: all 0.4s;
 }
 .card h2{
     font-size: 1.5rem;
     text-align: center;
 }
 .card p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-}
-.card:hover{
-    transform: translate(-1rem, -1rem);
-    box-shadow: 1rem 1rem rgba(0,0,0,0.5);
-}
-.card img:hover{
-    transform: translate(-0.5rem, -0.5rem);
-    box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
 }
 .project1{
     background: #FE004D;
@@ -297,16 +293,39 @@ a{
 .project3{
     background: #14551E;
 }
+.view-links{
+    display: flex;
+    gap: 2.5rem;
+}
+.view-link{
+    font-weight: bold;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(255,255,255,0.8);
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem rgba(0,0,0,0.6);
+    transition: all 0.3s;
+}
+.view-link:hover{
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 0.3rem rgba(0,0,0,0.5);
+}
+.view-link:active{
+    transform: translate(0, 0.1rem);
+    box-shadow: 0 0.2rem rgba(0,0,0,0.5);
+    transition-duration: 0.1s;
+}
 /*---------------------------contact---------------------------*/
 #contact{
     min-height: 40vh;
     justify-content: space-between;
-    background: black;
+    background: rgba(0,0,0,1);
     border-radius: 1rem 1rem 0 0;
     padding: 2rem 1rem 0.2rem 1rem;
 }
 .contact-title{
-    color: black;
+    color: rgba(0,0,0,1);
     margin: 0;
 }
 .contact-content{
@@ -314,7 +333,7 @@ a{
     gap: 2rem;
 }
 .final-message{
-    width: 15rem;
+    width: 13rem;
 }
 .contact-info{
     display: flex;
@@ -331,29 +350,31 @@ p i{
 }
 .icon{
     font-size: 2rem;
-    color: white;
+    color: rgba(255,255,255,1);
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.4rem;
     transition: all 0.3s;
 }
 .icon:hover{
-    color: rgba(14,47,80,1);
+    box-shadow: 0 0 1rem rgba(255,255,255,1);
 }
 .resume{
     cursor: pointer;
-    color: black;
-    background-color: white;
+    font-size: 1rem;
     font-weight: bold;
-    text-align: center;
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,0,1);
     padding: 0.5rem 0.7rem;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    border: 0.1rem solid rgba(255,255,255,1);
     display: flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s;
 }
 .resume:hover{
-    background: rgba(14,47,80,1);
-    color: white;
+    border: 0.1rem solid rgba(0,0,0,1);
+    box-shadow: 0 0 1rem rgba(255,255,255,1);
 }
 .credit{
     text-align: left;
@@ -407,6 +428,9 @@ p i{
     .about-img1 img{
         width: 24rem;
     }
+    .tab-titles{
+        gap: 1.5rem;
+    }
     .tab-links{
         font-size: 1rem;
     }
@@ -421,13 +445,10 @@ p i{
         font-size: 0.9rem;
     }
     .card{
-        height: 31.5rem;
-        width: 22.5rem;
+        height: 35rem;
+        width: 24rem;
     }
     .card h2{
         font-size: 1.3rem;
-    }
-    .card p{
-        font-size: 1.055rem;
     }
 }
