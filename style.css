@@ -143,7 +143,7 @@ a{
     color: #429DB5;
     animation: slideFromBottom 2s;
 }
-.home-img1 img{
+.home-img img{
     width: 30rem;
 }
 /*----------------------------about----------------------------*/
@@ -152,16 +152,18 @@ a{
 }
 .about-content{
     align-items: flex-start;
-    gap: max(6vw, 3rem);
+    column-gap: 5rem;
+    row-gap: 3rem;
 }
 .about-me{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
-.about-img1 img{
-    width: 33rem;
+.about-img img{
+    width: 20rem;
     box-shadow: 0 0 0.2rem rgba(0,0,0,0.8);
+    border: 0.2rem solid rgba(255,255,255,1);
     border-radius: 1.2rem;
 }
 .tab-titles{
@@ -212,6 +214,10 @@ a{
     font-size: 3rem;
     padding: 1rem 0;
 }
+#skills p{
+    font-size: 1rem;
+    font-weight: bold;
+}
 #skills ul{
     display: flex;
     flex-wrap: wrap;
@@ -234,10 +240,11 @@ a{
     color: #091E33;
 }
 .projects-content{
-    gap: max(6vw, 3rem);
+    column-gap: 5rem;
+    row-gap: 3rem;
 }
 .card{
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.8);
     height: 35rem;
     width: 25rem;
     display: flex;
@@ -246,6 +253,10 @@ a{
     gap: 1rem;
     padding: 1.5rem;
     border-radius: 1rem;
+    transition: all 0.3s;
+}
+.card:hover{
+    color: rgba(255,255,255,1);
 }
 .card img{
     width: 100%;
@@ -260,13 +271,19 @@ a{
     text-align: center;
 }
 .project1{
-    background: #FE004D;
+    background-color: rgba(95,0,225,1);
 }
 .project2{
-    background: #F6871C;
+    background-color: rgba(225,0,65,1);
 }
 .project3{
-    background: #14551E;
+    background-color: rgba(255,135,0,1);
+}
+.project4{
+    background-color: rgba(0,135,225,1);
+}
+.project5{
+    background-color: rgba(25,115,0,1);
 }
 .view-links{
     display: flex;
@@ -349,7 +366,7 @@ p i{
     text-align: left;
     position: relative;
     bottom: 0;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 /*----------------------------media----------------------------*/
 @media (width <= 64rem) {
@@ -366,7 +383,7 @@ p i{
     .welcome-statement line-3{
         font-size: 2.5rem;
     }
-    .home-img1 img{
+    .home-img img{
         width: 20rem;
     }
 }
@@ -394,7 +411,7 @@ p i{
     .container{
         padding: 3rem 0.5rem;
     }
-    .about-img1 img{
+    .about-img img{
         width: 24rem;
     }
     .tab-titles{
